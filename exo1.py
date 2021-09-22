@@ -12,8 +12,11 @@ print("*** EXO 1: chiffre mystère à deviner ***")
 guess_number = 42
 
 # votre code ici
-
-n = int(input("Saisir un chiffre : "))
+try:
+    n = int(input("Saisir un chiffre : "))
+except ValueError:
+    print("Saisie non valide")
+    exit()
 
 if n == guess_number:
     print("Bravo, tu as deviné !")
